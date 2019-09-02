@@ -7,3 +7,7 @@
 //
 
 import Foundation
+struct Category {
+    var title: String
+    var imageName : String
+}

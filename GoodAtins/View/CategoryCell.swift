@@ -10,15 +10,16 @@ import UIKit
 
 class CategoryCell: UITableViewCell {
 
+    @IBOutlet weak var categoryTitle: UILabel!
+    @IBOutlet weak var categoryimg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       categoryimg.layer.cornerRadius = 10
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configurecell(category : Category) {
+        categoryTitle.text = category.title
+        categoryimg.image = UIImage(named: category.imageName)
     }
-
 }
